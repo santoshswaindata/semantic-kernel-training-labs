@@ -25,10 +25,16 @@ async def main():
     kernel.add_service(chat_completion)
 
     # Add the plugin to the kernel
-
+    kernel.add_plugin(FlightBookingPlugin(), "flight_booking_plugin")
 
     # Configure the function choice behavior
-    
+    # Configure function choice behavior
+    # settings = AzureChatPromptExecutionSettings(
+    #     function_choice_behavior=FunctionChoiceBehavior.Auto(),
+    #     )
+    settings=AzureChatPromptExecutionSettings(
+        function_choice_behavior=FunctionChoiceBehavior.Auto(filters={"included_functions": ["search_flights"]}),
+        )
 
     chat_history = ChatHistory()
     chat_history.add_system_message("The year is 2025 and the current month is January")

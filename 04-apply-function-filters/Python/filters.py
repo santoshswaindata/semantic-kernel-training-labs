@@ -20,10 +20,16 @@ def has_user_permission(plugin_name: str, function_name: str) -> bool:
     return True
 
 # Create the function filer class
-async def permission_filter():
-
-    # Implement the function invocation method
-    
+# async def permission_filter():
+#     # Create the function filter class
+async def permission_filter(context: FunctionInvocationContext,
+    next: Callable[[FunctionInvocationContext], Awaitable[None]]
+    ) -> None:
+# Implement the function invocation method
+    if not has_user_permission(context.function.plugin_name, context.function.name):
+        context.result = "The operation was not approved by the user"
+        return
+    await next(context)
 
 async def main():
 
@@ -43,7 +49,7 @@ async def main():
     kernel.add_plugin(FlightBookingPlugin(), "flight_booking_plugin")
 
     # Add the permission filter to the kernel
-
+    kernel.add_filter('function_invocation', permission_filter)
 
     settings = AzureChatPromptExecutionSettings(
         function_choice_behavior=FunctionChoiceBehavior.Auto(),

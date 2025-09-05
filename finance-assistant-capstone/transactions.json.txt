@@ -1,0 +1,65 @@
+{
+  "transactions": [
+    {
+      "date": "2024-12-01",
+      "amount": 85.5,
+      "category": "Groceries",
+      "description": "Whole Foods"
+    },
+    {
+      "date": "2024-12-02",
+      "amount": 1200.0,
+      "category": "Rent",
+      "description": "Monthly Rent"
+    },
+    {
+      "date": "2024-12-03",
+      "amount": 45.75,
+      "category": "Dining",
+      "description": "Restaurant dinner"
+    },
+    {
+      "date": "2024-12-04",
+      "amount": 120.0,
+      "category": "Utilities",
+      "description": "Electric bill"
+    },
+    {
+      "date": "2024-12-05",
+      "amount": 35.2,
+      "category": "Transportation",
+      "description": "Gas station"
+    },
+    {
+      "date": "2024-12-06",
+      "amount": 89.99,
+      "category": "Entertainment",
+      "description": "Streaming services"
+    },
+    {
+      "date": "2024-12-07",
+      "amount": 250.0,
+      "category": "Shopping",
+      "description": "Clothing store"
+    },
+    {
+      "date": "2024-12-08",
+      "amount": 75.4,
+      "category": "Groceries",
+      "description": "Supermarket"
+    },
+    {
+      "date": "2024-12-09",
+      "amount": 180.0,
+      "category": "Healthcare",
+      "description": "Doctor visit"
+    },
+    {
+      "date": "2024-12-10",
+      "amount": 95.5,
+      "category": "Dining",
+      "description": "Weekend brunch"
+    }
+  ],
+  "monthly_income": 4500.0
+}

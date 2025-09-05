@@ -14,7 +14,7 @@ class FlightModel:
     IsBooked: bool = False
 
 class FlightBookingPlugin:
-    FILE_PATH = "flights.json"
+    FILE_PATH = "./flights.json"
 
     def __init__(self):
         self.flights: List[FlightModel] = self.load_flights_from_file()
